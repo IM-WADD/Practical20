@@ -2,7 +2,7 @@
 This practical will give you practice with more advanced JavaScript syntax functionality. In Stage 1, you will translate pre-written functions from traditional syntax to arrow syntax and vice versa. In Stages 2 and 3, you will create an application to display artworks from the Chicago Art Institute, focusing on using anonymous arrow functions as callbacks in Stage 2, and array methods to process data in Stage 3. 
 
 ## Stage 1 - Traditional vs. arrow function syntax
-Each exercise in this stage includes a function written in either traditional or arrow syntax. Your job is translate from one syntax to the other. Write your code in  main.js in the stage1 folder included with this repo. The Javascript file includes pre-written tests that you can use to ensure your functions are 
+Each exercise in this stage includes a function written in either traditional or arrow syntax. Your job is to translate from one syntax to the other. Write your code in  main.js in the stage1 folder included with this repo. The Javascript file includes pre-written tests that you can use to ensure your functions are 
 correct. Run the code in your browser to see the test results.
 
 ## Exercise 1.1
@@ -27,7 +27,7 @@ const shout = message => `${message.toUpperCase()}!!!`;
 ```
 
 ## Exercise 1.3
-Translate the traditional function to arrow function syntax
+Translate this traditional function to arrow function syntax
 ```
 function doubleUp (array) {
     const length = array.length;
@@ -57,19 +57,19 @@ Try to write your anonymous arrow function as succinctly as you can. Here are th
 - If your arrow function has exactly one parameter, you do not need to put brackets around the parameter name. In all other cases, you will need brackets around the parameter names.
 - If your arrow function will contain exactly one line of code, you do not need curly braces around the function contents. If that one line of code returns a value, you also don't need to include the return keyword.
 
-See the [help](help.md#step-2.1) for a completed example.
+See the [help](help.md#markdown-header-2.1) for a completed example.
 
 ## Step 2.2 - Write a function to fetch data
-Outling a function (arrow syntax encouraged!) called `getData` that does not take any parameters. Inside the function, use `fetch()` to get artwork data from the [Art Institute API](https://api.artic.edu/docs/#introduction). As the focus of this stage is arrow functions, use the Promise chaining approach rather than async / await and use anonymous arrow functions as the callbacks in the `then()` and `catch()` calls. 
+Outline a function (arrow syntax encouraged!) called `getData` that does not take any parameters. Inside the function, use `fetch()` to get artwork data from the [Art Institute API](https://api.artic.edu/docs/#introduction). As the focus of this stage is arrow functions, use the Promise chaining approach rather than async / await and use anonymous arrow functions as the callbacks in the `then()` and `catch()` calls. 
 
 The API URL is already stored as a constant in main.js.
 
 When data is retrieved from the API (the second `.then()` call), print it to the console to see what's inside. Call `getData()` from the Chrome console. You should see a JSON object with a lot of properties.
 
-For a reminder of how to work with `fetch()` and promise chaining, see the slides and examples from the second half of Week 9 (Lecture and Practical 18). There is a slide that gives you a code template using transitional function syntax, which you should be able to translate into arrow function syntax. A tiny bit more help is available on the [help](help.md#step-2.2) page.
+For a reminder of how to work with `fetch()` and promise chaining, see the slides and examples from the second half of Week 9 (Lecture and Practical 18). There is a slide that gives you a code template using transitional function syntax, which you should be able to translate into arrow function syntax. A tiny bit more help is available on the [help](help.md#markdown-header-2.2) page.
 
 ## Step 2.3 - Extract just the artwork data
-The JSON object returned by the API contains more properties than you need. In the console, you should see two properties at the top level of the JSON object: "pagination", which you can ignore, and "data", and array of JSON objects each representing an individual artwork.
+The JSON object returned by the API contains more properties than you need. In the console, you should see two properties at the top level of the JSON object: "pagination", which you can ignore, and "data", an array of JSON objects each representing an individual artwork.
 
 On the line after you print the API response, create a variable or constant called `artworks` and use it to store just the value associated with the "data" property in the JSON object. Assuming the parameter for the callback function is called `data` as shown in the template, you can access the API response's "data" property using either dot notation with the property name (`data.data`) or square brackets (`data["data"]`).
 
